@@ -1,0 +1,360 @@
+			----------Pseudocodes-----------
+First Program (prime number):
+
+procedure : prime_number
+BEGIN
+INIT num_arr:= array of numbers and special characters
+INIT Primeflag:= true
+num_arr.FOREACH
+	ARROW FUNCTION with num as argument
+		IF num>1
+			FOR loop=2 to loop<num
+				IF num divisible by 2
+					SET Primeflag := true
+				ELSE
+					SET Primeflag := false
+				ENDIF
+			ENDFOR
+		IF ELSE type of num is not a number
+			SET Primeflag := false
+		ENDIF
+	Ternary operator to console prime or not
+ENDnum_arr.FOREACH
+END
+
+
+-----------------------------------------
+Third program (reversing a string):
+
+Procedure : reversing a string
+BEGIN
+INIT str1:= string, str2
+IF typeof str1 is string
+	SET str2:= split str1 with empty character,reverse,join with empty character
+ENDIF
+PRINT str2
+END
+
+
+-----------------------------------------
+Fourth program (reverse words):
+
+Procedure : reversing words
+BEGIN
+INIT str1:=string
+INIT arr_str2 := use match method in str1 to get a-z range with modifiers i and g
+FOR loop:0 to length of arr_str2 -1
+	IF arr_str2 of index not emptycharacter
+		SET arr_str2 of index :=split (arr_str2 of index) with empty character,reverse,join with empty character 
+	ENDIF
+ENDFOR
+SET arr_str2:=join method of arr_str2 with empty character
+PRINT arr_str2
+END
+
+
+-----------------------------------------
+Fifth Program: check palindrome
+
+Procedure : check palindrome
+BEGIN
+INIT str1:=string,str2
+SET str2:= split str1 with empty character,reverse,join with empty character
+IF str2==str1
+	PRINT palindrome
+ELSE
+	PRINT not a palindrome
+ENDIF
+END
+
+
+-----------------------------------------
+Sixth Program : forEach and map comparision
+
+Procedure : forEach and map comparision
+BEGIN
+FUNCTION Twomult with one parameter
+	return parameter * 2
+ENDFUNCTION
+INIT ar1:= array of numbers
+INIT empty arrays ar2,ar3
+SET ar2:=ar1.forEach with Twomult function
+PRINT ar2
+PRINT ar1
+SET ar3:=ar1.map with Twomult function
+PRINT ar3
+SET ar1:=ar1.map with Twomult function
+PRINT ar1
+PRINT a msg
+END
+
+
+-----------------------------------------
+Seventh Program : Generate a random number
+
+Procedure : Generate a random number
+BEGIN
+INIT randomvalue := use Math.random method with 1 to 5 range and multiply with 6,enclose it in Math.floor
+IF randomvalue not = 0
+	PRINT randomvalue
+IFELSE randomvalue == 0
+	PRINT enter again
+ENDIF
+END
+
+
+----------------------------------------
+Eighth Program : unique array
+
+Procedure : generate an unique array
+BEGIN
+INIT given_arr:= array of numbers
+INIT uniqueArray := given_arr.filter(		FUNCTIONtaking two parameters item and pos
+		return given_arr.indexOf(item) == pos
+	ENDFUNCTION
+PRINT uniqueArray
+END
+
+
+----------------------------------------
+Ninth Program : Sum of 10 numbers
+
+Procedure : Sum of 10 numbers
+BEGIN
+INIT arrayof10n:=array of 1 to 10 numbers
+SET sumof10n:=arrayof10n.reduce(
+	ARROWFUNCTION with value and curr parameters
+			return value+curr)
+	ENDARROWFUNCTION
+PRINT sumof10n
+END
+
+
+----------------------------------------
+Tenth Program : Sum of even and odd
+
+Procedure : Sum of even and odd
+BEGIN
+INIT given_num:=100
+INIT even_sum:=0,odd_sum :=0
+INIT even_arr,odd_arr with empty arrays
+FOR loop:1 to given_num
+	IF loop divisible by 2
+		push loop to even_arr
+		BUMP even_sum
+	IFELSE loop not divisible by 2
+		push loop to odd_arr
+		BUMP odd_sum
+	ENDIF
+ENDFOR
+PRINT even_sum
+PRINT odd_sum
+END
+
+
+----------------------------------------
+Eleventh Program : merge two arrays
+
+Procedure : merge two arrays
+BEGIN
+INIT given_arr1:given array 1
+INIT given_arr2:given array 2
+push given_arr2 with spread to given_arr1
+PRINT given_arr1
+END
+
+
+----------------------------------------
+Twelfth Program : Remove duplicate
+
+Procedure : Remove duplicate in an array of objects
+BEGIN
+INIT myarr1:= store given array of objects
+FOR loop:0 to (length of myarr) -1
+	INIT arrob1:= stores 1st arrayobject
+	PRINT arrob1
+	INIT arrob1_prop1 := stores properties of arrob1
+	FOR loop2:loop+1 to (length of myarr) -1
+		INIT rem_arrob := stores the current array object w.r.t loop2 index
+		INIT arrob2_prop2:=stores properties of arrob2
+		IF arrob1_prop1.length==arrob2_prop2.length
+			FOR loop3:0 to 2
+				IF arrob1[arrob1_prop1[loop3]]==rem_arrob[arrob2_prop2[k]]
+					INIT del_index=loop3
+				ENDIF
+			ENDFOR
+		ENDIF
+	ENDFOR
+ENDFOR
+PRINT msg:index at which duplicate is present
+DELETE myarr[del_index]
+SET myarr1[del_index]:=myarr1[4]
+myarr1.POP()
+PRINT myarr1
+
+
+----------------------------------------
+13th Program: compare objects
+
+Procedure : compare objects
+BEGIN
+INIT obj1:=store given 1st object
+INIT obj2:=store given 2nd object
+INIT obj3:=store given 3rd object
+INIT obj4:=store given 4th object
+FUNCTION objcmpare with ob1 and ob2 arguments
+	INIT obj1prop:=store property names of obj1
+	INIT obj2prop:=store property names of obj2
+	IF obj1prop.length != obj2prop.length
+		RETURN FALSE
+	ENDIF
+	FOR loop=0 to 2
+		IF obj1prop[l]!==obj2prop[l]
+			RETURN FALSE
+		ELSE
+			RETURN TRUE
+		ENDIF
+	ENDFOR
+ENDFUNCTION
+INIT val1 := objcmpare call with obj1,obj2
+PRINT msg: comparing ob1 and ob2
+INIT val2 := objcmpare call with obj3,obj4
+PRINT msg: comparing ob3 and ob4
+END
+
+
+----------------------------------------
+14th program : flatten a multidimensional array
+
+Procedure : flatten a multidimensional array
+BEGIN
+INIT given_arr:= store given array
+SET given_arr:=given_arr.flat()
+PRINT given_arr
+END
+
+
+----------------------------------------
+16th program : * pattern
+
+Procedure : printing * pattern
+BEGIN
+FOR loop:0 to 5
+	FOR loop2:0 to i
+		IF loop1==5
+			PRINT ('*').repeat(loop2)
+		ENDIF
+	ENDFOR
+ENDFOR
+END
+
+
+----------------------------------------
+17th program :right angle triangle number pattern
+
+Procedure : generating right angle triangle number pattern
+BEGIN
+INIT p_arr,temp_arr with empty arrays
+INIT value:="ptag"
+INIT val_tmp:=" "
+INIT counter:=0,added:=0
+INIT n:=1
+FOR loop:0 to 10
+	IF i<=5
+		SET p_arr[loop]:= create a element with p in document
+		BUMP counter
+		INIT platmp:=p_arr[loop]
+		PRINT platmp
+		SET val_tmp:=value+counter
+		platmp.SETATTRIBUTE "id",val_tmp
+		APPENDCHILD p_arr[i]
+	ENDIF
+	FOR loop2:1 to loop
+		IF n>=11
+			BREAK
+		ENDIF
+		PUSH n++ to temp_arr
+	ENDFOR
+	SET n+=added
+	SET document.GETELEMENTBYID(val_tmp).innerHTML:=temp_arr
+	WHILE temp_arr.length
+		POP temp_arr
+	ENDWHILE
+ENDFOR
+PRINT p_arr
+END
+
+
+----------------------------------------
+Eighteenth program : pyramid with numbers incremented by 1
+
+Procedure : pyramid with numbers incremented by 1
+BEGIN
+INIT p_arr,temp_arr with empty arrays
+INIT value:="ptag"
+INIT val_tmp:=" "
+INIT counter:=0,added:=0
+INIT n:=1
+INIT k:=5
+FOR loop:0 to 10
+	IF i<=4
+		SET p_arr[loop]:= create a element with p in document
+		BUMP counter
+		INIT platmp:=p_arr[loop]
+		PRINT platmp
+		SET val_tmp:=value+counter
+		platmp.SETATTRIBUTE "id",val_tmp
+		APPENDCHILD p_arr[i]
+	ENDIF
+	FOR loop2:1 to loop
+		IF n>=11
+			BREAK
+		ENDIF
+		PUSH n++ to temp_arr
+	ENDFOR
+	INIT space:=("_").repeat(k)
+	SET k-=1
+	SET document.GETELEMENTBYID(val_tmp).innerHTML:=temp_arr
+	WHILE temp_arr.length
+		POP temp_arr
+	ENDWHILE
+ENDFOR
+END
+
+
+----------------------------------------
+Ninteenth program : dimaond * pattern
+
+Procedure : dimaond * pattern
+BEGIN
+INIT star_arr with empty array
+INIT star_var:="*"
+INIT star_space:=" "
+INIT k:=5
+INIT temp_concat
+FOR loop:0 to 5
+	SET temp_concat:=(" ").repeat(k) + star_var
+	SET star_var+=("*").repeat(2)
+	SET k-=1
+	push temp_concat to star_arr
+	PRINT star_arr[loop]
+ENDFOR
+FOR loop2:4 to 0
+	PRINT star_arr[loop2]
+ENDFOR
+END
+----------------------------------------
+	
+			 ******END******
+
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+ *********
+  *******
+   *****
+    ***
+     *
